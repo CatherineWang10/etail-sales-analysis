@@ -154,95 +154,9 @@ The project includes the following files:
 import pandas as pd
 
 df = pd.read_csv("Retail and wherehouse Sale.csv")
-我看到了，你这个问题很明确：
 
-## 原因
-你把 `## Conclusion` **粘贴到了代码块里面**。
-
-因为你上面有这一行：
-
-```md
-```python
 ```
 
-但是你**没有先用三个反引号把代码块结束掉**，所以 GitHub 认为下面所有内容都还是 Python 代码，包括：
-
-- `## Conclusion`
-- 后面的段落文字
-
-所以看起来就像“编码”。
-
----
-
-# 你现在怎么改
-你需要在这行代码后面：
-
-```md
-df = pd.read_csv("Retail and wherehouse Sale.csv")
-```
-
-**马上加一行：**
-
-```md
-```
-```
-
-也就是再输入 **三个反引号**，把代码块关掉。
-
----
-
-# 正确写法应该是这样
-你把这一整段改成下面这样就对了：
-
-```md
-## Example Data Loading Code
-```python
-import pandas as pd
-
-df = pd.read_csv("Retail and wherehouse Sale.csv")
-```
-
-## Conclusion
-This project demonstrates a small but coherent Python-based data analysis product in a business context.  
-Using retail sales data, the notebook applies data inspection, preparation, descriptive analysis, and visualisation to generate interpretable insights for a defined user audience.
-
-The analysis helps identify sales patterns, compare performance across suppliers and item types, and observe monthly trends over time.  
-Overall, the project shows how Python can be used to support business understanding and communicate useful analytical insights clearly.
-```
-
----
-
-# 你这个截图里还要顺手改一个小问题
-你现在有 **两个 `## Conclusion`**：
-
-一个在代码块里面：
-
-```md
-## Conclusion
-```
-
-一个在下面正文里：
-
-```md
-## Conclusion
-```
-
-## 正确做法：
-**删掉前面那个多余的 `## Conclusion`**，只保留后面一个。
-
----
-
-# 最终你这一部分应该长这样
-
-直接照着改：
-
-```md
-## Example Data Loading Code
-```python
-import pandas as pd
-
-df = pd.read_csv("Retail and wherehouse Sale.csv")
-```
 
 ## Conclusion
 This project demonstrates a small but coherent Python-based data analysis product in a business context.  
